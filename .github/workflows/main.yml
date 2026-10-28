@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate config.js from secrets
-        run:
+        run: |
           cat <<EOF > config.js
           window.APP_CONFIG = {
             API_URL: "${{secrets.API_URL}}",
