@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-permissions: 
+permissions:
   contents: read
   pages: write
   id-token: write
@@ -26,11 +26,14 @@ jobs:
           };
           EOF
 
-        - name: Setup pages
-          uses: actions/configure-pages@v3
-          with:
-            path: .
+      - name: Setup pages
+        uses: actions/configure-pages@v4
 
-        - name: Deploy to github pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v4
