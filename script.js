@@ -8,12 +8,12 @@ const accordeonFunction = (id, arr) => {
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}"
                 aria-expanded="true" aria-controls="collapse${i}">
-                ${currentProject.Organisation}
+                ${currentProject.Roles}
                 </button>
             </h2>
             <div id="collapse${i}" class="accordion-collapse collapse" data-bs-parent="#accordionProject">
                 <div class="accordion-body">
-                    ${currentProject.Rôles}
+                    ${currentProject.Missions}
                 </div>
             </div>
             </div>`
